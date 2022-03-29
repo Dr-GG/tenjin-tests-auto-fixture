@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<PackageId>Tenjin.Tests.AutoFixture</PackageId>
+	<Authors>Gerard Gouws</Authors>
+	<Company>Tenjin Libraries</Company>
+	<Description>Libary with re-useable services for the development of unit/integration tests for AutoFixture</Description>
+	<PackageIcon>tenjin.png</PackageIcon>
+	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	<PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/Dr-GG/tenjin-tests-auto-fixture</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/Dr-GG/tenjin-tests-auto-fixture</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<RepositoryBranch>master</RepositoryBranch>
+	<PackageTags>Re-useable AutoFixture unit test services</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="4.17.0" />
+    <PackageReference Include="Tenjin.Tests" Version="1.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Include="tenjin.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
