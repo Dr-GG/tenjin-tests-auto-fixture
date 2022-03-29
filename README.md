@@ -1,0 +1,1 @@
+# tenjin-tests-auto-fixture
