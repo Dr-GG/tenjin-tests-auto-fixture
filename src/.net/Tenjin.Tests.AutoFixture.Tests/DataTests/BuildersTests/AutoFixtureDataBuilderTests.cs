@@ -1,10 +1,10 @@
 ﻿using System;
 using NUnit.Framework;
-using Tenjin.Tests.AutoFixtureTests.Builders;
-using Tenjin.Tests.AutoFixtureTests.Models;
-using Tenjin.Tests.Data.Builders.AutoFixture.Options;
+using Tenjin.Tests.AutoFixture.Data.Builders.Options;
+using Tenjin.Tests.AutoFixture.Tests.Builders;
+using Tenjin.Tests.AutoFixture.Tests.Models;
 
-namespace Tenjin.Tests.AutoFixtureTests.DataTests.BuildersTests
+namespace Tenjin.Tests.AutoFixture.Tests.DataTests.BuildersTests
 {
     [TestFixture]
     public class AutoFixtureDataBuilderTests
@@ -47,7 +47,7 @@ namespace Tenjin.Tests.AutoFixtureTests.DataTests.BuildersTests
         {
             var builder = GetDataBuilder(false, false);
             var car = builder.CreateCarObject();
-            
+
             AssertNotNullCar(car);
             AssertNotNullWheel(car.FrontLeftWheel);
             AssertNotNullWheel(car.FrontRightWheel);

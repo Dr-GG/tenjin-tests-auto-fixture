@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Core", "01 - Core", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Tests", "02 - Tests", "{5056EAAC-E25D-439A-9BDB-6BC19F41ACCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenjin.Tests.AutoFixture", "Tenjin.Tests.AutoFixture\Tenjin.Tests.AutoFixture.csproj", "{704931FE-0429-4B81-9698-13138C3EEFFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenjin.Tests.AutoFixture", "Tenjin.Tests.AutoFixture\Tenjin.Tests.AutoFixture.csproj", "{704931FE-0429-4B81-9698-13138C3EEFFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenjin.Tests.AutoFixtureTests", "Tenjin.Tests.AutoFixtureTests\Tenjin.Tests.AutoFixtureTests.csproj", "{C5F55935-9529-4C79-AA39-15D6B1E641D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenjin.Tests.AutoFixture.Tests", "Tenjin.Tests.AutoFixture.Tests\Tenjin.Tests.AutoFixture.Tests.csproj", "{59A63A15-F798-432A-BE26-544A48A8265C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,17 +21,17 @@ Global
 		{704931FE-0429-4B81-9698-13138C3EEFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{704931FE-0429-4B81-9698-13138C3EEFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{704931FE-0429-4B81-9698-13138C3EEFFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5F55935-9529-4C79-AA39-15D6B1E641D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5F55935-9529-4C79-AA39-15D6B1E641D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5F55935-9529-4C79-AA39-15D6B1E641D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5F55935-9529-4C79-AA39-15D6B1E641D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A63A15-F798-432A-BE26-544A48A8265C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A63A15-F798-432A-BE26-544A48A8265C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A63A15-F798-432A-BE26-544A48A8265C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A63A15-F798-432A-BE26-544A48A8265C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{704931FE-0429-4B81-9698-13138C3EEFFB} = {FF225CDE-0C5E-43FA-AAF5-53914CCD0411}
-		{C5F55935-9529-4C79-AA39-15D6B1E641D4} = {5056EAAC-E25D-439A-9BDB-6BC19F41ACCD}
+		{59A63A15-F798-432A-BE26-544A48A8265C} = {5056EAAC-E25D-439A-9BDB-6BC19F41ACCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69780B33-5D63-48E7-BA59-E8EBFEEA634C}
