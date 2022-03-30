@@ -33,7 +33,7 @@ namespace Tenjin.Tests.AutoFixture.Data.Builders
 
         private void OmitComplexTypes()
         {
-            var builder = new OmitComplexTypesSpecimenBuilder();
+            var builder = new AutoFixtureOmitComplexTypesSpecimenBuilder();
 
             Fixture.Customizations.Insert(0, builder);
         }

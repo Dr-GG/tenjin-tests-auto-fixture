@@ -3,7 +3,7 @@ using AutoFixture.Kernel;
 
 namespace Tenjin.Tests.AutoFixture.Data.Builders.SpecimenBuilders
 {
-    public class OmitComplexTypesSpecimenBuilder : ISpecimenBuilder
+    public class AutoFixtureOmitComplexTypesSpecimenBuilder : ISpecimenBuilder
     {
         private static readonly IEnumerable<Type> IgnoreComplexTypes = new[]
         {

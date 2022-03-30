@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tenjin.Tests.AutoFixtureTests.Models
+namespace Tenjin.Tests.AutoFixture.Tests.Models
 {
     public class AutoFixtureCarManufacturerObject
     {

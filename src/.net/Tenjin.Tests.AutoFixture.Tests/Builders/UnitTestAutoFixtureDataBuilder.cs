@@ -1,9 +1,9 @@
 ﻿using AutoFixture;
-using Tenjin.Tests.AutoFixtureTests.Models;
-using Tenjin.Tests.Data.Builders.AutoFixture;
-using Tenjin.Tests.Data.Builders.AutoFixture.Options;
+using Tenjin.Tests.AutoFixture.Data.Builders;
+using Tenjin.Tests.AutoFixture.Data.Builders.Options;
+using Tenjin.Tests.AutoFixture.Tests.Models;
 
-namespace Tenjin.Tests.AutoFixtureTests.Builders
+namespace Tenjin.Tests.AutoFixture.Tests.Builders
 {
     public class UnitTestAutoFixtureDataBuilder : AutoFixtureDataBuilder
     {
