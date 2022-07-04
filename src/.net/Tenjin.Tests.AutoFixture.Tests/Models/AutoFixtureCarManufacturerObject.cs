@@ -1,11 +1,10 @@
 ﻿using System;
 
-namespace Tenjin.Tests.AutoFixture.Tests.Models
+namespace Tenjin.Tests.AutoFixture.Tests.Models;
+
+public class AutoFixtureCarManufacturerObject
 {
-    public class AutoFixtureCarManufacturerObject
-    {
-        public string Name { get; set; } = string.Empty;
-        public string Country { get; set; } = string.Empty;
-        public DateTime Founded { get; set; }
-    }
+    public string Name { get; set; } = string.Empty;
+    public string Country { get; set; } = string.Empty;
+    public DateTime Founded { get; set; }
 }

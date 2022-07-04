@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="4.17.0" />
-    <PackageReference Include="Tenjin.Tests" Version="1.0.1.12" />
+    <PackageReference Include="Tenjin.Tests" Version="1.1.0.15" />
   </ItemGroup>
 
   <ItemGroup>
