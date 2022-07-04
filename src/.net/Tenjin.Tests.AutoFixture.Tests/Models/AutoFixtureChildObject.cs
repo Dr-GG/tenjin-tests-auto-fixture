@@ -1,7 +1,6 @@
-﻿namespace Tenjin.Tests.AutoFixture.Tests.Models
+﻿namespace Tenjin.Tests.AutoFixture.Tests.Models;
+
+public class AutoFixtureChildObject
 {
-    public class AutoFixtureChildObject
-    {
-        public AutoFixtureParentObject? Parent { get; set; }
-    }
+    public AutoFixtureParentObject? Parent { get; set; }
 }
