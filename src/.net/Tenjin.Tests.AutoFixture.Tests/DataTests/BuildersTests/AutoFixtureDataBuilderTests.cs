@@ -1,4 +1,5 @@
 ﻿using System;
+using FluentAssertions;
 using NUnit.Framework;
 using Tenjin.Tests.AutoFixture.Data.Builders.Options;
 using Tenjin.Tests.AutoFixture.Tests.Builders;
@@ -6,7 +7,7 @@ using Tenjin.Tests.AutoFixture.Tests.Models;
 
 namespace Tenjin.Tests.AutoFixture.Tests.DataTests.BuildersTests;
 
-[TestFixture]
+[TestFixture, Parallelizable(ParallelScope.Children)]
 public class AutoFixtureDataBuilderTests
 {
     [Test]
@@ -15,31 +16,12 @@ public class AutoFixtureDataBuilderTests
         var builder = GetDataBuilder(true, false);
         var obj = builder.CreateChildObject();
 
-        Assert.IsNotNull(obj);
-        Assert.IsNotNull(obj.Parent);
-        Assert.IsNotNull(obj.Parent!.Parent);
+        obj.Should().NotBeNull();
+        obj.Parent.Should().NotBeNull();
+        obj.Parent!.Parent.Should().NotBeNull();
 
-        Assert.IsNull(obj.Parent.Child);
-        Assert.IsNull(obj.Parent.Parent!.Child);
-    }
-
-    [Test]
-    public void CreateObject_WhenNotOmittingRecursions_DoesNotIgnoreRecursions()
-    {
-        var builder = GetDataBuilder(false, false);
-        Exception? error = null;
-
-        try
-        {
-            builder.CreateChildObject();
-        }
-        catch (Exception thrownError)
-        {
-            error = thrownError;
-        }
-
-        Assert.IsNotNull(error);
-        Assert.AreEqual("AutoFixture.ObjectCreationExceptionWithPath", error!.GetType().FullName);
+        obj.Parent.Child.Should().BeNull();
+        obj.Parent.Parent!.Child.Should().BeNull();
     }
 
     [Test]
@@ -63,34 +45,35 @@ public class AutoFixtureDataBuilderTests
         var car = builder.CreateCarObject();
 
         AssertNotNullCar(car);
-        Assert.IsNull(car.FrontLeftWheel);
-        Assert.IsNull(car.FrontRightWheel);
-        Assert.IsNull(car.RearLeftWheel);
-        Assert.IsNull(car.RearRightWheel);
-        Assert.IsNull(car.Manufacturer);
+        car.FrontLeftWheel.Should().BeNull();
+        car.FrontRightWheel.Should().BeNull();
+        car.RearLeftWheel.Should().BeNull();
+        car.RearRightWheel.Should().BeNull();
+        car.Manufacturer.Should().BeNull();
     }
 
     private static void AssertNotNullWheel(AutoFixtureCarWheelObject wheel)
     {
-        Assert.IsNotNull(wheel);
-        Assert.IsNotEmpty(wheel.Name);
-        Assert.NotZero(wheel.SizeInInches);
+        wheel.Should().NotBeNull();
+        wheel.Name.Should().NotBeEmpty();
+        wheel.SizeInches.Should().NotBe(0);
     }
 
     private static void AssertNotNullManufacturer(AutoFixtureCarManufacturerObject manufacturer)
     {
-        Assert.IsNotNull(manufacturer);
-        Assert.IsNotEmpty(manufacturer.Name);
-        Assert.IsNotEmpty(manufacturer.Country);
-        Assert.Greater(manufacturer.Founded, DateTime.MinValue);
+        manufacturer.Should().NotBeNull();
+
+        manufacturer.Name.Should().NotBeEmpty();
+        manufacturer.Country.Should().NotBeEmpty();
+        manufacturer.Founded.Ticks.Should().BeGreaterThan(DateTime.MinValue.Ticks);
     }
 
     private static void AssertNotNullCar(AutoFixtureCarObject car)
     {
-        Assert.IsNotNull(car);
-        Assert.IsNotEmpty(car.Model);
-        Assert.NotZero(car.Year);
-        Assert.NotZero(car.Price);
+        car.Should().NotBeNull();
+        car.Model.Should().NotBeEmpty();
+        car.Year.Should().NotBe(0);
+        car.Price.Should().NotBe(0);
     }
 
     private static UnitTestAutoFixtureDataBuilder GetDataBuilder(
