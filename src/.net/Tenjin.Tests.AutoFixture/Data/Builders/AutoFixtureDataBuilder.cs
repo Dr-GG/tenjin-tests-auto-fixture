@@ -5,8 +5,14 @@ using Tenjin.Tests.Data.Builders;
 
 namespace Tenjin.Tests.AutoFixture.Data.Builders;
 
+/// <summary>
+/// The extended DataBuilder tailored towards the AutoFixture library.
+/// </summary>
 public abstract class AutoFixtureDataBuilder : DataBuilder
 {
+    /// <summary>
+    /// Creates a new instance.
+    /// </summary>
     protected AutoFixtureDataBuilder(AutoFixtureDataBuilderOptions? options = null)
     {
         options ??= AutoFixtureDataBuilderOptions.Default;
@@ -16,6 +22,9 @@ public abstract class AutoFixtureDataBuilder : DataBuilder
         InitialiseFixture(options);
     }
 
+    /// <summary>
+    /// The Fixture instance to be used.
+    /// </summary>
     public Fixture Fixture { get; }
 
     private void InitialiseFixture(AutoFixtureDataBuilderOptions options)

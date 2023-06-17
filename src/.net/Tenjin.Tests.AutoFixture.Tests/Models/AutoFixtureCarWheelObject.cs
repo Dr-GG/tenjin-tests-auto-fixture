@@ -2,6 +2,6 @@
 
 public class AutoFixtureCarWheelObject
 {
-    public int SizeInInches { get; set; }
+    public int SizeInches { get; set; }
     public string Name { get; set; } = string.Empty;
 }
