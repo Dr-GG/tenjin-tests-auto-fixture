@@ -5,11 +5,8 @@ using Tenjin.Tests.AutoFixture.Tests.Models;
 
 namespace Tenjin.Tests.AutoFixture.Tests.Builders;
 
-public class UnitTestAutoFixtureDataBuilder : AutoFixtureDataBuilder
+public class UnitTestAutoFixtureDataBuilder(AutoFixtureDataBuilderOptions options) : AutoFixtureDataBuilder(options)
 {
-    public UnitTestAutoFixtureDataBuilder(AutoFixtureDataBuilderOptions options) : base(options)
-    { }
-
     public AutoFixtureChildObject CreateChildObject()
     {
         return Fixture.Build<AutoFixtureChildObject>().Create();
@@ -20,6 +17,5 @@ public class UnitTestAutoFixtureDataBuilder : AutoFixtureDataBuilder
         return Fixture.Build<AutoFixtureCarObject>().Create();
     }
 
-    public override void Save()
-    { }
+    public override void Save() { }
 }
